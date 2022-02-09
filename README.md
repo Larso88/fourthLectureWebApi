@@ -6,7 +6,7 @@ ExpressJS web server for Java (Node)
 Bli spennende å se hva Johannes finner på i dag
 
 ####
-
+* [ ] Setup npm project and express
 * [ ] Respond to simple request
   * [ ] get request
   * [ ] Post Request
@@ -17,4 +17,4 @@ Bli spennende å se hva Johannes finner på i dag
   * [ ] Enforce user is logged in
 * [ ] Routes
 * [ ] Testing Express code - Supertest with superagent
-*  Det er dagens plan!
+* Det er dagens plan!
