@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Larso88/fourthLectureWebApi#readme",
   "devDependencies": {
+    "body-parser": "^1.19.1",
     "nodemon": "^2.0.15"
   },
   "dependencies": {
