@@ -1,18 +1,21 @@
 import express from "express";
-import bodyParser from "body-parser"
+import bodyParser from "body-parser";
+import cookieParser from "cookie-parser"
 
 const app = express();
 app.use(bodyParser.json())
+app.use(cookieParser())
 
 app.get("/login", (req, res) => {
-    res.json( {
-        username: "admin"
-    })
+    const { username } = req.cookies;
+    const user = users.find(u => u.username === username);
+    const {fullName} = user;
+    res.json( {username, fullName})
 })
 
 const users = [
     {
-        username: "admin", password: "321terces"
+        username: "administrator", password: "321terces", fullName: "Test Person"
     }
 ]
 
@@ -23,12 +26,11 @@ app.post("/login", (req, res ) => {
     //set a cookie
     //read the cookie in /login
 
-    const body = req.body;
-    const username = body.username;
-    const password = body.password
+    const { password, username} = req.body;
 
     if (users.find(u => u.username === username).password === password) {
-        res.sendStatus(200)
+        res.cookie("username", username);
+        res.sendStatus(200);
     }else {
         res.send(401)
     }
