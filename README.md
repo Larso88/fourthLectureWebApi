@@ -12,7 +12,8 @@ Bli spennende å se hva Johannes finner på i dag
   * [x] Post Request
 * [x] JSON
 * [x] Cookies
-* [ ] Static files
+* [x] Static files
+* [ ] HTML files
 * [ ] Express middleware (app.use)
   * [ ] Enforce user is logged in
 * [ ] Routes
